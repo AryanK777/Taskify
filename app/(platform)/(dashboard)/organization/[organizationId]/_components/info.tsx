@@ -8,10 +8,12 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 interface InfoProps {
   isPro: boolean;
+  className?: string;
 };
 
 export const Info = ({
   isPro,
+  className
 }: InfoProps) => {
   const { organization, isLoaded } = useOrganization();
 

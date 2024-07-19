@@ -18,13 +18,12 @@ const BillingPage = async () => {
     <div className="w-full">
       <Info isPro={isPro || false} />
       <Separator className="my-2" />
-      <h2 className="text-2xl p-4">Current Plan</h2>
       <PricingCard
           planExists={isPro}
           amt={isPro ? '$20' : '$0'}
           buttonCta={isPro ? 'Manage' : 'Upgrade'}
           highlightDescription={isPro ? "Want to change or manage your plan? You can do this here. If you have further question contact support@taskify.com" : "Want to upgrade your plan? You can do this here. If you have further question contact support@taskify.com"}
-          features={isPro ? ['Unlimited boards', 'Advanced checklists', 'Admin and security features'] : ["Limited boards", "basic checklists", "Only essential security features."]}
+          features={isPro ? ['Unlimited boards', 'Advanced checklists', 'Admin and security features'] : ["Limited boards", "Basic checklists", "Only essential security features."]}
           description={isPro ? "Better collaboration, custom workflows, and priority support with our Premium Plan!" : "Try our Basic Plan. Perfect for experiencing our powerful platform with no commitment!"}
           duration="/ month"
           title={isPro ? "Pro" : "Basic"}

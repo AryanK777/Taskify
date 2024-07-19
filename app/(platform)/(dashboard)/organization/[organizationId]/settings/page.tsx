@@ -1,9 +1,18 @@
 import { OrganizationProfile } from "@clerk/nextjs";
+import { Info } from "../_components/info";
+import { checkSubscription } from "@/lib/subscription";
+import { Separator } from "@/components/ui/separator";
 
-const SettingsPage = () => {
+
+const SettingsPage = async () => {
+  const isPro = await checkSubscription();
+
   return (
     <div className="w-full">
+      <Info isPro={isPro || false} className="mb-2" />
+      <Separator className="my-2" />
      <OrganizationProfile
+      afterLeaveOrganizationUrl="/"
       appearance={{
         elements: {
           rootBox: {
